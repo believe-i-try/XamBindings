@@ -66,9 +66,8 @@ namespace Haneke {
         string Key { get; }
 
         // @required -(void)fetchImageWithSuccess:(void (^)(UIImage *))successBlock failure:(void (^)(NSError *))failureBlock;
-        [Abstract]
         [Export ("fetchImageWithSuccess:failure:")]
-        void FetchImageWithSuccess (Action<UIImage> successBlock, Action<NSError> failureBlock);
+        void FetchImage (Action<UIImage> successBlock, Action<NSError> failureBlock);
 
         // @optional -(void)cancelFetch;
         [Export ("cancelFetch")]
@@ -153,6 +152,9 @@ namespace Haneke {
         [DesignatedInitializer]
         IntPtr Constructor (string path);
 
+		[Export("fetchImageWithSuccess:failure:")]
+		void FetchImage(Action<UIImage> successBlock, Action<NSError> failureBlock);
+
         // -(void)cancelFetch;
         [Export ("cancelFetch")]
         void CancelFetch ();
@@ -167,6 +169,9 @@ namespace Haneke {
         [Export ("initWithURL:")]
         [DesignatedInitializer]
         IntPtr Constructor (NSUrl URL);
+
+		[Export("fetchImageWithSuccess:failure:")]
+		void FetchImage(Action<UIImage> successBlock, Action<NSError> failureBlock);
 
         // @property (readonly, nonatomic) NSURL * URL;
         [Export ("URL")]

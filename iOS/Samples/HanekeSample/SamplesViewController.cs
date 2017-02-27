@@ -41,10 +41,11 @@ namespace Samples
                     };
             }
 
-
+			var fetcher = new HNKNetworkFetcher(new NSUrl("https://media-cdn.tripadvisor.com/media/photo-s/03/9b/30/26/seattle.jpg"));
+			fetcher.FetchImage((imag) => { HanekeImageView.Image = imag; }, (err) => { });
             HanekeImageView.SetCacheFormat (format);
-            HanekeImageView.SetImage(new NSUrl("http://images.kpopstarz.com/data/images/full/190451/katy-perry-sex-bomb.png?w=300"), UIImage.FromBundle("41015.png") );
-            HanekeButton.SetBackgroundImage(new NSUrl("http://images.kpopstarz.com/data/images/full/190451/katy-perry-sex-bomb.png?w=300"), UIControlState.Normal, UIImage.FromBundle("41015.png"));
+            //HanekeImageView.SetImage(new NSUrl("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"), UIImage.FromBundle("41015.png") );
+            HanekeButton.SetBackgroundImage(new NSUrl("https://www.xamarin.com/content/images/pages/branding/assets/xamagon.png"), UIControlState.Normal, UIImage.FromBundle("41015.png"));
         }
 
         public override void ViewWillAppear(bool animated)

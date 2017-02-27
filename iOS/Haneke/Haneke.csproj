@@ -39,9 +39,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="libHaneke.linkwith.cs">
-      <DependentUpon>libHaneke.a</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
@@ -50,7 +47,12 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="libHaneke.a" />
+    <NativeReference Include="libHaneke.a">
+      <Kind>Static</Kind>
+      <WeakFrameworks>ImageIO</WeakFrameworks>
+      <LinkerFlags>-ObjC</LinkerFlags>
+      <IsCxx>True</IsCxx>
+    </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

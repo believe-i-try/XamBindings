@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Haneke</id>
+    <version>1.0.2.1</version>
+    <title>Haneke</title>
+    <authors>alexb</authors>
+    <owners>alexb</owners>
+    <projectUrl>https://github.com/believe-i-try/XamBindings</projectUrl>
+    <iconUrl>https://components.xamarin.com/resources/icons/component-1415/icon_114x114.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A lightweight zero-config image cache for Xamarin iOS.</description>
+    <summary>Haneke resizes images and caches the result on memory and disk. Everything is done in background, allowing for fast, responsive scrolling. Asking Haneke to load, resize, cache and display an appropriately sized image is as simple as:
+
+ImageView.SetImage(url);
+Really.</summary>
+    <releaseNotes>Updated to 1.0.2 (Added simulator x86_64 architectures)</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Haneke iOS Xamarin</tags>
+  </metadata>
+  <files>
+      <file src="bin/Release/Haneke.dll" target="lib/Xamarin.iOS10/Haneke.dll" />
+  </files>
+</package>
